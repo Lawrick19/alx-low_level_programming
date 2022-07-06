@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void) // apps that prints putchar
+int main(void)
 {
 	printf("_putchar\n");
 	return (0);
