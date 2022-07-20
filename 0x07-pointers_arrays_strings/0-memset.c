@@ -1,4 +1,4 @@
-#include "main.h"
+#include <string.h>
 #include <stdio.h>
 
 /**
@@ -26,6 +26,29 @@ void simple_print_buffer(char *buffer, unsigned int size)
 		printf("0x%02x", buffer[i]);
 	}
 	printf("\n");
+}
+
+/**
+* _memset - a mimic function of the built-in memset function
+*/
+void *_memset(void *b, int c, int size)
+{
+	int i;
+
+	unsigned char *p = b;
+	i = 0;
+
+	while (size > 0)
+	{
+		*p = c;
+		p++;
+		size--;
+
+		if (!*p)
+		{
+			break;
+		}
+	}
 }
 
 /**
